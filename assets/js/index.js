@@ -29,7 +29,7 @@ window.addEventListener('keydown', (e) => {
             translateX -= step;
             break;
         case 'd':
-            translateX += step;
+            translateX -= step;
             break;
         case 'w':
              translateX += step;
@@ -38,7 +38,7 @@ window.addEventListener('keydown', (e) => {
             translateY += step;
             break;
          case 's':
-             translateX += step;
+             translateX -= step;
             break;
         case 'ArrowDown':
             translateY -= step;
