@@ -1,6 +1,20 @@
+function preventTrackpadScroll(e) {
+    // Check if the event indicates trackpad scrolling in either direction
+    if (e.deltaX !== 0 || e.deltaY !== 0) {
+      e.preventDefault();
+    }
+  }
+  
+  // Add event listeners for different trackpad-related events
+  window.addEventListener('wheel', preventTrackpadScroll, { passive: false });
+  window.addEventListener('DOMMouseScroll', preventTrackpadScroll, { passive: false });
+  window.addEventListener('mousewheel', preventTrackpadScroll, { passive: false });
+  
 const step = 25; // Adjust the step size as per your preference
 let translateX = 0;
 let translateY = 0;
+
+
 
 
 window.addEventListener('keydown', (e) => {
@@ -8,26 +22,42 @@ window.addEventListener('keydown', (e) => {
         case 'ArrowLeft':
             translateX += step;
             break;
+        case 'a':
+            translateX += step;
+            break;
         case 'ArrowRight':
             translateX -= step;
             break;
+        case 'd':
+            translateX += step;
+            break;
+        case 'w':
+             translateX += step;
+            break;
         case 'ArrowUp':
             translateY += step;
+            break;
+         case 's':
+             translateX += step;
             break;
         case 'ArrowDown':
             translateY -= step;
             break;
     }
+
+
     
     // Apply transformations to the background
     document.querySelector('.grid-container').style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
 });
 
+document.body.style.overflow = 'hidden';
 
 
 document.addEventListener("DOMContentLoaded", function () {
   const introOverlay = document.getElementById("intro-overlay");
   const enterButton = document.getElementById("close-intro");
+  const audioPlayer = document.getElementById("audio");
 
 
 
@@ -37,7 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Close the intro overlay when the close button is clicked
   enterButton .addEventListener("click", function () {
     introOverlay.style.display = "none";
+
+    audioPlayer.play();
   });
+
+
 
 
 
@@ -55,5 +89,19 @@ elevenB.addEventListener("click", function () {
     closeButton .addEventListener("click", function () {
         elevenPopupC.style.display = "none";
       });
+});
+
+
+const infoButton = document.getElementById("info-toggle")
+const info = document.getElementById("info")
+
+infoButton.addEventListener("click", function() {
+  info.style.display = "block";
+});
+
+const infocloseButton = document.getElementById("info-close")
+
+infocloseButton.addEventListener("click", function() {
+  info.style.display = "none";
 });
 

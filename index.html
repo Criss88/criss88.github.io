@@ -10,6 +10,11 @@
   </head>
   <body>
      
+
+    <audio id="audio" autoplay="false">
+      <source src="/cave2.mp3">
+    </audio>
+
     <div class="grid-container">
    <div class="background-image">
   </div>
@@ -48,7 +53,7 @@
 </div>
 
 <div class="fivelinkone">
-  <a href="https://earth.google.com/web/@37.98188975,23.74279377,247.28507992a,247.0997707d,35y,81.76372908h,52.29628786t,0r" target="_blank"> 551</a>
+  <a href="https://earth.google.com/web/@37.98188975,23.74279377,247.28507992a,247.0997707d,35y,81.76372908h,52.29628786t,0r"> 551</a>
 </div>
 
 <div class="sevenlinkone">
@@ -156,8 +161,19 @@
 </div>
 
 
-   
-
+<button id="info-toggle">INFO</button>   
+<div id="info" class="information">
+  
+  <div class="info-text">
+    <button id="info-close">CLOSE</button>   
+    <h1 class="title"></h1>
+    <p class="info-text">
+     Info text will be here
+      </p>
+          <br>
+         
+  </div>
+</div>
   
 	  <script type="module" src="assets/js/index.js"></script>
   </body>
@@ -165,10 +181,9 @@
   <div id="intro-overlay" class="overlay">
   
     <div class="intro-content">
-      <br>
-      <br>
+    
       <h1 class="title">Descent to Lycabettus Hill</h1>
-      <p class="Text">An Interactive Story Game</p>
+      <p class="sub">An Interactive Story Game</p>
       <p class="Text">
         Journey through bunkers and intricate networks hidden beneath the earth's crust and find what's lying in the Athenian underbelly. 
         </p>
