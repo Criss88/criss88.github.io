@@ -23,18 +23,37 @@ window.addEventListener('keydown', (e) => {
     document.querySelector('.grid-container').style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const introOverlay = document.getElementById("intro-overlay");
-  const closeButton = document.getElementById("close-intro");
+  const enterButton = document.getElementById("close-intro");
+
+
 
   // Show the intro overlay when the page loads
   introOverlay.style.display = "block";
 
   // Close the intro overlay when the close button is clicked
-  closeButton.addEventListener("click", function () {
+  enterButton .addEventListener("click", function () {
     introOverlay.style.display = "none";
   });
 
 
+
+});
+
+
+
+const elevenB = document.getElementById("eleven_b");
+const elevenPopupC = document.getElementById("elevenc");
+const closeButton = document.getElementById("close-floorplan")
+
+elevenB.addEventListener("click", function () {
+  elevenPopupC.style.display = "block";
+
+    closeButton .addEventListener("click", function () {
+        elevenPopupC.style.display = "none";
+      });
 });
 
