@@ -18,33 +18,49 @@ let translateY = 0;
 
 
 window.addEventListener('keydown', (e) => {
-    switch (e.key) {
-        case 'ArrowLeft':
-            translateX += step;
-            break;
-        case 'a':
-            translateX += step;
-            break;
-        case 'ArrowRight':
-            translateX -= step;
-            break;
-        case 'd':
-            translateX -= step;
-            break;
-        case 'w':
-             translateY += step;
-            break;
-        case 'ArrowUp':
-            translateY += step;
-            break;
-         case 's':
-             translateY -= step;
-            break;
-        case 'ArrowDown':
-            translateY -= step;
-            break;
-    }
+  switch (e.key) {
+      case 'ArrowLeft':
+          translateX += step;
+          // Ensure translateX does not go beyond -100vw
+          translateX = Math.min(translateX, 1500);
+          break;
+      case 'ArrowRight':
+          translateX -= step;
+          // Ensure translateX does not exceed 200vw
+          translateX = Math.max(translateX, -2400);
+          break;
+      case 'ArrowUp':
+          translateY += step;
+          translateY = Math.min(translateY, 1000);
+          break;
+      
+      case 'ArrowDown':
+          translateY -= step;
+          translateY = Math.max(translateY, -1150);
+          break;
 
+          case 'a':
+          translateX += step;
+          // Ensure translateX does not go beyond -100vw
+          translateX = Math.min(translateX, 1500);
+          break;
+      case 'd':
+          translateX -= step;
+          // Ensure translateX does not exceed 200vw
+          translateX = Math.max(translateX, -2400);
+          break;
+      case 'w':
+          translateY += step;
+          translateY = Math.min(translateY, 1000);
+          break;
+      
+      case 's':
+          translateY -= step;
+          translateY = Math.max(translateY, -1150);
+          break;
+     
+     
+  }
 
     
     // Apply transformations to the background

@@ -324,7 +324,7 @@ a:hover {
   top: -13vh; 
   filter: drop-shadow(10px 10px 20px rgb(255, 67, 161));
 }
-.five_b img {
+.five_b video {
   position: absolute;
   width: 400px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
@@ -407,7 +407,7 @@ a:hover {
 
 
 
-.nine_a img{
+.nine_a video{
   position: absolute;
 
   width: 70vw;
