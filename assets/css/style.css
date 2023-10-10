@@ -48,22 +48,51 @@
 }
 
 .information{
+  
   display: none;
   width: 100%;
   top: 0%;
-  height: 100%;
+  left: 0%;
+  height: 600%;
   position: absolute;
   align-items: center;
   text-align: center;
   background-color:black;
 z-index: 999;
+
 }
 
 .info-text{
   font-size: 18px;
   color: white;
+  text-align: left;
+  align-items: center;
+  margin-left: 7%;
+  margin-right: 7%;
+  font-family: 'Coconat-Regular';
+  
 }
 
+.subtitle{
+  font-size: 18px;
+  color: white;
+  text-align: left;
+  align-items: center;
+  margin-left: 7%;
+  margin-right: 7%;
+  font-family: 'Cantique';
+}
+
+.title2{
+  padding-top: 4%;
+  text-align: center;
+  align-items: center;
+  margin-left: 7%;
+  margin-right: 7%;
+  color: white;
+  font-family: 'Cantique';
+  font-size: 30px;
+}
 
 .background-image {
   width: 350vw; /* Adjust this value to make the background image larger */
@@ -77,16 +106,9 @@ z-index: 999;
 
 }
 
-.onelink {
-  top: 140vh;
-  left: -70vw;
-  position: absolute;
-  border: 1px solid;
-  border-color: transparent;
-  font-size: 15vh;
-}
 
-.onelinktwo {
+
+.onelinkthree {
   top: 160vh;
   left: -90vw;
   position: absolute;
@@ -95,71 +117,8 @@ z-index: 999;
   font-size: 15vh;
 }
 
-.twolinkone {
-  top: 80vh;
-  left: -70vw;
-  position: absolute; 
-  border: 1px solid;
-  border-color: transparent;
-  font-size: 15vh;
- 
-}
 
 
-.twolinktwo {
-  top: 500px;
-  left: -800px;
-  position: absolute;
-  border: 1px solid;
-  border-color: transparent;
-  font-size: 15vh;
-}
-
-.threelinktwo {
-  top: -50vh;
-  left: -60vw;
-  position: absolute;
-  border: 1px solid;
-  border-color: transparent;
-  font-size: 15vh;
-}
-
-.threelinkone {
-  top: -92vh;
-  left: -88vw;
-  position: absolute;
-  border: 1px solid;
-  border-color: transparent;
-  font-size: 15vh;
-}
-
-.fourlinkone {
-  top: -82vh;
-  left: 50vw;
-  position: absolute;
-  border: 1px solid;
-  border-color: transparent;
-  font-size: 28vh;
-}
-
-.fivelinkone {
-  top: 20vh;
-  left: 54vw;
-  position: absolute;
-  border: 1px solid;
-  border-color: transparent;
-  font-size: 28vh;
-  z-index: 999;
-}
-
-.sixlinkone {
-  top: 120vh;
-  left: 50vw;
-  position: absolute;
-  border: 1px solid;
-  border-color: transparent;
-  font-size: 28vh;
-}
 
 .sixlinktwo {
   top: 170vh;
@@ -180,8 +139,8 @@ z-index: 999;
 }
 
 .sevenlinktwo {
-  top: 10vh;
-  left: 20vw;
+  top: 5vh;
+  left: 180vw;
   position: absolute;
   border: 1px solid;
   border-color: balck;
@@ -191,19 +150,14 @@ z-index: 999;
 
 a {
   color: transparent;
+  animation: glow 1s infinite alternate;
 
 }
 a:hover {
   animation: glow 1s infinite alternate;
 }
 
-.twolinkthree {
-  top: 35vh;
-  left: -68vw;
-  font-size: 20vh;
-  position: absolute;
- 
-}
+
 
 
 
@@ -326,7 +280,7 @@ a:hover {
 }
 .five_b video {
   position: absolute;
-  width: 400px; /* Adjust the width as needed */
+  width: 25vw; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
   left: 17vw;
   top: 42vh; 
@@ -468,11 +422,10 @@ a:hover {
 .eleven_popup_c {
   display: none;
   position: absolute;
- 
-  width: 350vw;
-  height: 350vh; 
-
-  margin: 20px;
+width: 100%;
+height: 100%;
+top: 0%;
+left: 0%;
   background-color:  rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
@@ -482,12 +435,12 @@ a:hover {
 .floor{
   
   position: absolute;
+  top: 30%;
+  left: 50%;
 
   width: 800px;
   height: auto; 
   margin: 20px;
-  left: 140vw; 
-  top: 120vh;
 
 }
 
@@ -498,16 +451,16 @@ a:hover {
   width: 800px;
   height: auto; 
   margin: 20px;
-  left: 190vw; 
-  top: 150vh;
+  left: 0%;
+  top: 1%;;
 
 }
 
 #close-floorplan{
   
   position: absolute;
-  left: 230vw; 
-  top: 120vh;
+  left: 90%; 
+  top:1%;
   margin-top: 10px;
   cursor: pointer;
   background: transparent;

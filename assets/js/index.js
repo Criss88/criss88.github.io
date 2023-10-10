@@ -1,9 +1,14 @@
+let overlayOpen = false; // Initialize overlay state as closed
+
 function preventTrackpadScroll(e) {
-    // Check if the event indicates trackpad scrolling in either direction
-    if (e.deltaX !== 0 || e.deltaY !== 0) {
+  // Check if the event indicates trackpad scrolling in either direction
+  if (e.deltaX !== 0 || e.deltaY !== 0) {
+    // Prevent trackpad scrolling if the overlay is closed
+    if (!overlayOpen) {
       e.preventDefault();
     }
   }
+}
   
   // Add event listeners for different trackpad-related events
   window.addEventListener('wheel', preventTrackpadScroll, { passive: false });
@@ -13,22 +18,21 @@ function preventTrackpadScroll(e) {
 const step = 25; // Adjust the step size as per your preference
 let translateX = 0;
 let translateY = 0;
-
-
-
+const minTranslateX = window.innerWidth; // -100vw
+const maxTranslateX = window.innerWidth; // -200vw
 
 window.addEventListener('keydown', (e) => {
-  switch (e.key) {
-      case 'ArrowLeft':
-          translateX += step;
-          // Ensure translateX does not go beyond -100vw
-          translateX = Math.min(translateX, 1500);
-          break;
-      case 'ArrowRight':
-          translateX -= step;
-          // Ensure translateX does not exceed 200vw
-          translateX = Math.max(translateX, -2400);
-          break;
+    switch (e.key) {
+        case 'ArrowLeft':
+            translateX += step;
+            // Ensure translateX does not go beyond the left bound
+            translateX = Math.min(translateX, minTranslateX);
+            break;
+        case 'ArrowRight':
+            translateX -= step;
+            // Ensure translateX does not exceed the right bound
+            translateX = Math.max(translateX, - 1.5 * maxTranslateX);
+            break;
       case 'ArrowUp':
           translateY += step;
           translateY = Math.min(translateY, 1000);
@@ -65,6 +69,7 @@ window.addEventListener('keydown', (e) => {
     
     // Apply transformations to the background
     document.querySelector('.grid-container').style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
+    
 });
 
 document.body.style.overflow = 'hidden';
@@ -108,16 +113,19 @@ elevenB.addEventListener("click", function () {
 });
 
 
-const infoButton = document.getElementById("info-toggle")
-const info = document.getElementById("info")
+const infoButton = document.getElementById("info-toggle");
+const info = document.getElementById("info");
 
-infoButton.addEventListener("click", function() {
+infoButton.addEventListener("click", function () {
   info.style.display = "block";
+  overlayOpen = true; // Set overlay state to open
+  document.body.style.overflow = "auto"; // Disable scrolling on the body
 });
 
-const infocloseButton = document.getElementById("info-close")
+const infocloseButton = document.getElementById("info-close");
 
-infocloseButton.addEventListener("click", function() {
+infocloseButton.addEventListener("click", function () {
   info.style.display = "none";
+  overlayOpen = false; // Set overlay state to closed
+  document.body.style.overflow = "hidden"; // Enable scrolling on the body
 });
-
