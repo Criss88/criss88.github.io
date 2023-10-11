@@ -20,13 +20,15 @@ let translateX = 0;
 let translateY = 0;
 const minTranslateX = window.innerWidth; // -100vw
 const maxTranslateX = window.innerWidth; // -200vw
+const minTranslateY = window.innerHeight; // -100vw
+const maxTranslateY = window.innerHeight; // -200vw
 
 window.addEventListener('keydown', (e) => {
     switch (e.key) {
         case 'ArrowLeft':
             translateX += step;
             // Ensure translateX does not go beyond the left bound
-            translateX = Math.min(translateX, minTranslateX);
+            translateX = Math.min(translateX, 0.95 * minTranslateX);
             break;
         case 'ArrowRight':
             translateX -= step;
@@ -35,23 +37,23 @@ window.addEventListener('keydown', (e) => {
             break;
       case 'ArrowUp':
           translateY += step;
-          translateY = Math.min(translateY, 1000);
+          translateY = Math.min(translateY, 1.1 * minTranslateY);
           break;
       
       case 'ArrowDown':
           translateY -= step;
-          translateY = Math.max(translateY, -1150);
+          translateY = Math.max(translateY, - 1.3 * minTranslateY);
           break;
 
           case 'a':
           translateX += step;
           // Ensure translateX does not go beyond -100vw
-          translateX = Math.min(translateX, 1500);
+          translateX = Math.min(translateX, minTranslateX);
           break;
       case 'd':
           translateX -= step;
           // Ensure translateX does not exceed 200vw
-          translateX = Math.max(translateX, -2400);
+          translateX = Math.max(translateX, - 1.5 * maxTranslateX);
           break;
       case 'w':
           translateY += step;

@@ -130,8 +130,8 @@ z-index: 999;
 }
 
 .sevenlinkone {
-  top: 15vh;
-  left: 190vw;
+  top: 20vh;
+  left: 220vw;
   position: absolute;
   border: 1px solid;
   border-color: transparent;
@@ -139,8 +139,8 @@ z-index: 999;
 }
 
 .sevenlinktwo {
-  top: 5vh;
-  left: 180vw;
+  top: -25vh;
+  left: 150vw;
   position: absolute;
   border: 1px solid;
   border-color: balck;
@@ -340,7 +340,7 @@ a:hover {
 
 .eight_a img{
   position: absolute;
-  width: 340px;
+  width: 22vw;
   height: auto; 
   top: 79vh; 
   left: 105vw;
@@ -364,9 +364,9 @@ a:hover {
 .nine_a video{
   position: absolute;
 
-  width: 70vw;
+  width: 74vw;
   height: auto; 
-  top: 118vh; 
+  top: 111vh; 
   left: 100vw;
   animation: glow 1s infinite alternate;
   margin: 20px;
@@ -387,19 +387,19 @@ a:hover {
 .eleven_b {
   position: absolute;
 
-  width: 300px;
+  width: 30vw;
   height: auto; 
   top: 140vh; 
   left: 206vw; 
   margin: 20px;
-
+  cursor: pointer;
   
 }
 
 .elevenb {
   position: absolute;
 
-  width: 300px;
+  width: 30vw;
   height: auto; 
   margin: 20px;
   filter: drop-shadow(10px 10px 20px rgb(255, 67, 161));
@@ -411,7 +411,7 @@ a:hover {
 .eleven_popup_b img{
   
   position: absolute;
-  width: 300px;
+  width: 30vw;
   height: auto; 
   top: 140vh; 
   left: 206vw; 
@@ -485,7 +485,7 @@ left: 0%;
   display: none;
   position: fixed;
   background-image: url("/Untitled-1.png");
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   top: 0;
   left: 0;
