@@ -110,7 +110,7 @@ z-index: 999;
 .background-image {
   width: 350vw; /* Adjust this value to make the background image larger */
   height: 350vh; /* Adjust this value to make the background image larger */
-  background-image: url("/assets/backdrop1.png");
+  background-image: url("/assets/backdrop2.png");
   background-size: 350vw 350vh;
   left: -100vw;
   top: -120vh; /* Center the image vertically in the viewport */
@@ -520,7 +520,15 @@ left: 0%;
 
 .Text {
   font-family: 'Coconat-Regular';
-  font-size: 18px;
+  font-size: 17px;
+  text-shadow:2px 2px 2px #FF00FF;
+  color: #0A00FF;
+  
+}
+
+.smallext {
+  font-family: 'Coconat-Regular';
+  font-size: 14px;
   text-shadow:2px 2px 2px #FF00FF;
   color: #0A00FF;
   
@@ -528,14 +536,14 @@ left: 0%;
 
 .sub {
   font-family: 'Coconat-Bold';
-  font-size: 18px;
+  font-size: 17px;
   text-shadow:2px 2px 2px #FF00FF;
   color: #0A00FF;
   
 }
 
 .title {
-  padding-top: 14%;
+  padding-top: 8%;
   font-family: 'Cantique';
   font-size: 40px;
   color: #0A00FF;
@@ -545,7 +553,7 @@ left: 0%;
 
 #close-intro {
   position: relative;
-  margin-top: 10px;
+  margin-top: 8px;
   cursor: pointer;
   background: transparent;
   border: transparent;
