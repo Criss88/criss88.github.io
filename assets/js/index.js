@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     introOverlay.style.display = "none";
 
     audioPlayer.play();
+    audio.loop = true;
   });
 
 
